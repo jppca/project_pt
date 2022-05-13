@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Técnica</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <main>
+        <nav class="boxNav">
+            <div class="titNav">
+                <div class="logo">
+                    <li class="fa fa-diamond"></li>
+                </div>
+                <div class="toggle" onclick="alternate('menu')">Open</div>
+            </div>
+            <ul class="barNav" id="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">HOW IT WORKS?</a></li>
+                <li><a href="#">LOG IN</a></li>
+                <li><a href="#">SIGN UP</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="column">
+                <p>INNOVATIVE SOLUTION FOR SOURCING CANDIDATES</p>
+                <h1>Help us find missing puzzle,<br />get rewarded properly.</h1>
+                <div class="input">
+                    <input class="input-text" type="text" placeholder="Keyword, job title or company" />
+                    <button class="input-button" type="button" onclick="location.href='#'">
+                        <span class="fa fa-search"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="column" style="text-align: center">
+                <img src="images/img1.png" />
+            </div>
+        </div>
+        <div class="row-color">
+            <div class="row">
+                <div class="column">
+                    <p class="jobs">RECENTLY ADDED JOBS:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="columnCard">
+                    <li class="fa fa-dropbox" style="font-size: 80px; color: blue; padding: 15px"></li>
+                    <hr />
+                    <p><strong>Business Strategy Associate</strong></p>
+                    <p>Dropbox,Inc.</p>
+                    <p class="location">
+                        <span class="fa fa-map-marker"></span> San Fransisco, California
+                    </p>
+                    <div class="row">
+                        <div class="card-content">
+                            <p class="money">$1,240</p>
+                            <p>of hiring reward</p>
+                        </div>
+                        <div class="card-content">
+                            <button class="card-button" type="button" onclick="location.href='#'">
+                                <span class="fa fa-diamond"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnCard">
+                    <li class="fa fa-dropbox" style="font-size: 80px; color: blue; padding: 15px"></li>
+                    <hr />
+                    <p><strong>Business Strategy Associate</strong></p>
+                    <p>Dropbox,Inc.</p>
+                    <p class="location">
+                        <span class="fa fa-map-marker"></span> San Fransisco, California
+                    </p>
+                    <div class="row">
+                        <div class="card-content">
+                            <p class="money">$1,240</p>
+                            <p>of hiring reward</p>
+                        </div>
+                        <div class="card-content">
+                            <button class="card-button" type="button" onclick="location.href='#'">
+                                <span class="fa fa-diamond"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnCard">
+                    <li class="fa fa-dropbox" style="font-size: 80px; color: blue; padding: 15px"></li>
+                    <hr />
+                    <p><strong>Business Strategy Associate</strong></p>
+                    <p>Dropbox,Inc.</p>
+                    <p class="location">
+                        <span class="fa fa-map-marker"></span> San Fransisco, California
+                    </p>
+                    <div class="row">
+                        <div class="card-content">
+                            <p class="money">$1,240</p>
+                            <p>of hiring reward</p>
+                        </div>
+                        <div class="card-content">
+                            <button class="card-button" type="button" onclick="location.href='#'">
+                                <span class="fa fa-diamond"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="columnCard">
+                    <li class="fa fa-dropbox" style="font-size: 80px; color: blue; padding: 15px"></li>
+                    <hr />
+                    <p><strong>Business Strategy Associate</strong></p>
+                    <p>Dropbox,Inc.</p>
+                    <p class="location">
+                        <span class="fa fa-map-marker"></span> San Fransisco, California
+                    </p>
+                    <div class="row">
+                        <div class="card-content">
+                            <p class="money">$1,240</p>
+                            <p>of hiring reward</p>
+                        </div>
+                        <div class="card-content">
+                            <button class="card-button" type="button" onclick="location.href='#'">
+                                <span class="fa fa-diamond"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+    <script>
+        function alternate(menu) {
+            var oMenu = document.getElementById(menu);
+            //Si el menu tiene clase abierto
+            //cambia clase a cerrado y cambia el botón
+            if (oMenu.classList.contains("openM")) {
+                oMenu.classList.remove("openM");
+                oMenu.classList.add("closeM");
+                event.target.innerText = "Open";
+            }
+            //Si no está abierto, cambia clase a abierto y cambia el botón
+            else {
+                oMenu.classList.remove("closeM");
+                oMenu.classList.add("openM");
+                event.target.innerText = "Close";
+            }
+        }
+    </script>
+</body>
+
+</html>

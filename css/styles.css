@@ -1,0 +1,278 @@
+/**Styles***/
+:root {
+  --colorW: rgb(255, 255, 255);
+  --colorRsp: rgba(95, 67, 213, 0);
+  --colorP: rgba(82, 68, 212, 1);
+  --font: "Courier New";
+}
+
+body {
+  font-family: var(--font);
+}
+main {
+  background: rgb(213, 213, 222);
+  background: linear-gradient(
+    35deg,
+    rgba(234, 237, 244, 1) 70%,
+    var(--colorP) 70%
+  );
+}
+.row-color {
+  background: rgb(213, 213, 222);
+  background: linear-gradient(
+    180deg,
+    rgba(234, 237, 244, 1) 58%,
+    rgb(252, 252, 252) 58%
+  );
+}
+.header {
+  background-color: #5f43d500;
+  padding: 20px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  text-align: start;
+  margin: 10px;
+  background-color: #5f43d500;
+}
+/**navBar**/
+.boxNav {
+  display: flex;
+  justify-content: space-between;
+  background: var(--colorRsp);
+  color: var(--colorW);
+  padding: 4px;
+}
+.boxNav .logo {
+  color: var(--colorP);
+  padding: 5px;
+  font-size: 20px;
+}
+.boxNav .barNav {
+  margin: 0 10px 0 0;
+}
+.boxNav .titNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  background: var(--colorRsp);
+  color: var(--colorW);
+  height: auto;
+}
+.boxNav .titNav .toggle {
+  display: none;
+}
+.boxNav .titNav .logo {
+  margin: 10px 10px;
+}
+.boxNav .barNav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+}
+.boxNav .barNav li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+.boxNav .barNav li:hover {
+  background: var(--colorW);
+  color: var(--colorP);
+  cursor: pointer;
+  border-radius: 50px;
+}
+.boxNav .barNav li a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+/**search***/
+.input {
+  background-color: var(--colorW);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.19);
+  position: relative;
+  margin: 12px 12px 12px 0px;
+  padding: 4px;
+  border-radius: 50px;
+}
+
+.input-text {
+  outline: none;
+  border: 10px;
+  background-color: var(--colorW);
+  padding: 15px;
+  border-radius: 50px;
+  width: 86%;
+}
+
+.input-button {
+  position: relative;
+  padding: 10px;
+  background-color: #fe9258;
+  border-radius: 100%;
+  border: 0;
+  box-shadow: 0 5px 10px rgb(254, 146, 88), 0 3px 3px rgba(0, 0, 0, 0.23);
+  color: var(--colorW);
+}
+/**card**/
+.columnCard {
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+  background-color: var(--colorW);
+}
+.columnCard .row {
+  background-color: rgba(234, 237, 244, 1);
+}
+.columnCard p {
+  text-align: start;
+  color: grey;
+}
+.card-content {
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+}
+.card-content p {
+  margin: 0;
+  padding: 0px 20px 0px 10px;
+}
+.card-button {
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--colorW);
+  border: 0;
+  border-radius: 100%;
+  border-width: 1px;
+  border-color: var(--colorW);
+  color: var(--colorP);
+  font-size: 20px;
+}
+.card-button:hover {
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--colorP);
+  border: 0;
+  border-radius: 100%;
+  border-width: 1px;
+  box-shadow: 0 5px 10px var(--colorP), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+.card-button span:hover {
+  color: var(--colorW);
+  font-size: 20px;
+  width: 100%;
+}
+.columnCard .money {
+  padding: 20px 20px 0px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--colorP);
+}
+.columnCard .location {
+  font-size: 12px;
+  color: gray;
+}
+/**footer**/
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  color: var(--colorP);
+}
+/**Mobile**/
+@media (max-width: 600px) {
+  .boxNav {
+    flex-direction: column;
+    align-items: flex-end;
+    background: unset;
+  }
+  .boxNav .logo {
+    color: var(--colorW);
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .boxNav .barNav {
+    color: black;
+    background: var(--colorW);
+    flex-direction: column;
+    display: none;
+  }
+  .boxNav .barNav li {
+    padding: 10px 20px;
+  }
+  .boxNav .barNav li:hover {
+    background: var(--colorRsp);
+    color: var(--colorP);
+  }
+  .boxNav .titNav {
+    width: 100%;
+    align-items: center;
+  }
+  .boxNav .titNav .toggle {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .openM {
+    display: flex !important;
+  }
+  .closeM {
+    display: none !important;
+  }
+
+  main {
+    background: var(--colorP);
+    background: linear-gradient(
+      180deg,
+      var(--colorP) 53%,
+      rgba(213, 213, 222, 1) 53%
+    );
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  h1,
+  p {
+    color: var(--colorW);
+  }
+
+  footer p,
+  .row .column .jobs {
+    color: black;
+  }
+  .columnCard {
+    -ms-flex: 1;
+    flex: 1;
+    padding: 8px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .input,
+  .column h1 {
+    width: 100%;
+  }
+
+  .input-text {
+    width: 75%;
+  }
+}
